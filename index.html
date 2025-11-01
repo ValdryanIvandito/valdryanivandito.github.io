@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Valdryan Ivandito - Fullstack Developer & Cardano Blockchain Educator
+    </title>
+    <meta
+      name="description"
+      content="Fullstack Developer with 2 years of experience specializing in blockchain technology and Cardano ecosystem. Educator, developer, and community contributor."
+    />
+    <meta
+      name="keywords"
+      content="fullstack developer, blockchain developer, cardano, web development, blockchain educator, Next.js, React, Aiken, Mesh.js"
+    />
+    <meta name="author" content="Valdryan Ivandito" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Valdryan Ivandito - Fullstack Developer & Cardano Blockchain Educator"
+    />
+    <meta
+      property="og:description"
+      content="Fullstack Developer with 2 years of experience specializing in blockchain technology and Cardano ecosystem."
+    />
+    <meta property="og:image" content="public/profile-picture.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Valdryan Ivandito - Fullstack Developer & Cardano Blockchain Educator"
+    />
+    <meta
+      name="twitter:description"
+      content="Fullstack Developer with 2 years of experience specializing in blockchain technology and Cardano ecosystem."
+    />
+    <meta name="twitter:image" content="public/profile-picture.jpg" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#1E40AF",
+              accent: "#F59E0B",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .typing-animation {
+        border-right: 2px solid #3b82f6;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        50% {
+          border-color: #3b82f6;
+        }
+        51%,
+        100% {
+          border-color: transparent;
+        }
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .skill-bar {
+        width: 0%;
+        transition: width 2s ease-in-out;
+      }
+
+      .video-overlay {
+        background: linear-gradient(
+          45deg,
+          rgba(59, 130, 246, 0.9),
+          rgba(30, 64, 175, 0.9)
+        );
+      }
+
+      .glass-effect {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold text-primary">VI</div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="hover:text-primary transition-colors"
+              >Home</a
+            >
+            <a href="#portfolio" class="hover:text-primary transition-colors"
+              >Portfolio</a
+            >
+            <a href="#education" class="hover:text-primary transition-colors"
+              >Contribution</a
+            >
+            <a href="#certificates" class="hover:text-primary transition-colors"
+              >Certificates</a
+            >
+            <a href="#clients" class="hover:text-primary transition-colors"
+              >Partners</a
+            >
+          </div>
+          <button id="mobile-menu-btn" class="md:hidden text-2xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-800 border-t border-gray-700"
+      >
+        <div class="px-6 py-4 space-y-4">
+          <a href="#home" class="block hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="#portfolio"
+            class="block hover:text-primary transition-colors"
+            >Portfolio</a
+          >
+          <a
+            href="#education"
+            class="block hover:text-primary transition-colors"
+            >Contribution</a
+          >
+          <a
+            href="#certificates"
+            class="block hover:text-primary transition-colors"
+            >Certificates</a
+          >
+          <a href="#clients" class="block hover:text-primary transition-colors"
+            >Partners</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-gray-900"
+      ></div>
+      <div class="container mx-auto px-12 relative z-10">
+        <div class="fade-in grid lg:grid-cols-[1fr_2fr] gap-12 items-center">
+          <!-- Profile Picture - Left Side -->
+          <div class="flex justify-center">
+            <div
+              class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-primary shadow-2xl shadow-primary/50"
+            >
+              <img
+                src="public/profile-picture.jpg"
+                alt="Valdryan Ivandito"
+                class="w-full h-full object-cover"
+                onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center\'><i class=\'fas fa-user text-8xl text-white\'></i></div>'"
+              />
+            </div>
+          </div>
+
+          <!-- Content - Right Side -->
+          <div class="text-center">
+            <h1 class="text-2xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Hi, I'm <span class="text-primary">Valdryan Ivandito</span>
+            </h1>
+            <div class="text-lg md:text-2xl lg:text-3xl mb-2 md:mb-6 h-12">
+              <span id="typing-text" class="typing-animation"></span>
+            </div>
+
+            <p class="text-sm md:text-lg text-gray-300 mb-8">
+              I'm a Fullstack Developer with 2 years of experience. I love
+              building things that work well and keep learning along the way.
+              Lately, I've been exploring blockchain and AI, always believing
+              that improvement is a lifelong process.
+            </p>
+
+            <!-- Social Media Icons -->
+            <div class="flex justify-center justify-center gap-4 mb-8">
+              <a
+                href="https://github.com/valdryanivandito"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-12 h-12 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/50"
+                title="GitHub"
+              >
+                <i class="fab fa-github text-xl"></i>
+              </a>
+              <a
+                href="https://discord.com/users/Valdryan08#9209"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-12 h-12 bg-gray-800 hover:bg-indigo-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/50"
+                title="Discord"
+              >
+                <i class="fab fa-discord text-xl"></i>
+              </a>
+              <a
+                href="https://x.com/miraclemonad"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-12 h-12 bg-gray-800 hover:bg-black rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-gray-700/50"
+                title="X (Twitter)"
+              >
+                <i class="fab fa-x-twitter text-xl"></i>
+              </a>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+              <a
+                href="#portfolio"
+                class="bg-primary hover:bg-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                View My Work
+              </a>
+              <a
+                href="https://t.me/valdryan"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+              >
+                <i class="fab fa-telegram"></i>
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Animated Background Elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          class="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-pulse"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-32 h-32 bg-accent/10 rounded-full animate-pulse delay-1000"
+        ></div>
+        <div
+          class="absolute bottom-20 left-20 w-16 h-16 bg-secondary/10 rounded-full animate-pulse delay-2000"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="fade-in">
+          <h2 class="text-4xl font-bold text-center mb-16">
+            My <span class="text-primary">Portfolio</span>
+          </h2>
+          <!-- Portfolio cards will be generated dynamically by JavaScript -->
+          <div id="portfolio-grid" class="grid md:grid-cols-2 gap-8">
+            <!-- Portfolio Item 1 -->
+            <div
+              class="group relative bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <div
+                class="aspect-video bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-play text-4xl text-white group-hover:scale-110 transition-transform"
+                ></i>
+              </div>
+              <div
+                class="absolute inset-0 video-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer"
+                onclick="openVideoModal('project1')"
+              >
+                <i class="fas fa-play text-6xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div
+              class="group relative bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <div
+                class="aspect-video bg-gradient-to-br from-accent to-orange-600 flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-play text-4xl text-white group-hover:scale-110 transition-transform"
+                ></i>
+              </div>
+              <div
+                class="absolute inset-0 video-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer"
+                onclick="openVideoModal('project2')"
+              >
+                <i class="fas fa-play text-6xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div
+              class="group relative bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <div
+                class="aspect-video bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-play text-4xl text-white group-hover:scale-110 transition-transform"
+                ></i>
+              </div>
+              <div
+                class="absolute inset-0 video-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer"
+                onclick="openVideoModal('project3')"
+              >
+                <i class="fas fa-play text-6xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div
+              class="group relative bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <div
+                class="aspect-video bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-play text-4xl text-white group-hover:scale-110 transition-transform"
+                ></i>
+              </div>
+              <div
+                class="absolute inset-0 video-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer"
+                onclick="openVideoModal('project4')"
+              >
+                <i class="fas fa-play text-6xl text-white"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contribution & Dedication Section -->
+    <section id="education" class="py-20 bg-gray-900/50">
+      <div class="container mx-auto px-6">
+        <div class="fade-in">
+          <h2 class="text-4xl font-bold text-center mb-16">
+            My Contribution & <span class="text-primary">Dedication</span>
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <!-- Workshop 1: Levvy Masterclass -->
+            <div
+              class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <div class="relative aspect-video overflow-hidden">
+                <img
+                  src="https://img.youtube.com/vi/yRT-gyJnk-Y/hqdefault.jpg"
+                  alt="Levvy Masterclass"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 cursor-pointer"
+                  onclick="window.open('https://youtu.be/yRT-gyJnk-Y?list=PLUj8499OocHgfSDHvtuMZ56zBdK8tw3OG', '_blank')"
+                >
+                  <i class="fab fa-youtube text-6xl text-red-600"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-3 text-white">
+                  Levvy: How to Become Profitable Lender
+                </h3>
+                <p class="text-gray-400 text-sm mb-4">
+                  Online Workshop about Cardano DeFi Levvy lending strategies,
+                  risk management, and maximizing returns in the Cardano lending
+                  ecosystem.
+                </p>
+                <a
+                  href="https://youtu.be/yRT-gyJnk-Y?list=PLUj8499OocHgfSDHvtuMZ56zBdK8tw3OG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  <i class="fab fa-youtube"></i>
+                  <span>Watch on YouTube</span>
+                  <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Workshop 2: Cardano DeFi Odyssey -->
+            <div
+              class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <div class="relative aspect-video overflow-hidden">
+                <img
+                  src="https://img.youtube.com/vi/0i84ZwIpvxc/hqdefault.jpg"
+                  alt="Cardano DeFi Odyssey"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 cursor-pointer"
+                  onclick="window.open('https://youtu.be/0i84ZwIpvxc', '_blank')"
+                >
+                  <i class="fab fa-youtube text-6xl text-red-600"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-3 text-white">
+                  DeFi Odyssey at Maranatha Christian University
+                </h3>
+                <p class="text-gray-400 text-sm mb-4">
+                  Comprehensive seminar exploring the Cardano DeFi ecosystem on
+                  Cardano blockchain, covering protocols, strategies, and
+                  practical implementations.
+                </p>
+                <a
+                  href="https://youtu.be/0i84ZwIpvxc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  <i class="fab fa-youtube"></i>
+                  <span>Watch on YouTube</span>
+                  <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Workshop 3: Maranatha University -->
+            <div
+              class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <div class="relative aspect-video overflow-hidden">
+                <img
+                  src="public/maranatha.png"
+                  alt="Maranatha Workshop"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 cursor-pointer"
+                  onclick="window.open('https://youtube.com/playlist?list=PLUj8499OocHiU1ynKh0eWNybchcUG3rY9&si=IcYzmIpTrNDJicxQ', '_blank')"
+                >
+                  <i class="fab fa-youtube text-6xl text-red-600"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-3 text-white">
+                  Cardano Developer Workshop - Maranatha Christian University
+                </h3>
+                <p class="text-gray-400 text-sm mb-4">
+                  Comprehensive workshop series teaching students at Maranatha
+                  Christian University the basics of dApps development using
+                  Cardano techstack such as Mesh.js Web3 Library, Blockfrost
+                  API, and Aiken smart contract.
+                </p>
+                <a
+                  href="https://youtube.com/playlist?list=PLUj8499OocHiU1ynKh0eWNybchcUG3rY9&si=IcYzmIpTrNDJicxQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  <i class="fab fa-youtube"></i>
+                  <span>Watch on YouTube</span>
+                  <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Workshop 4: Cardano Developer Indonesia -->
+            <div
+              class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <div class="relative aspect-video overflow-hidden">
+                <img
+                  src="public/cardanodev.jpg"
+                  alt="Cardano Developer Indonesia Workshop"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 cursor-pointer"
+                  onclick="window.open('https://youtube.com/playlist?list=PLUj8499OocHiL8gXPv8wMlLW-zIcyYdrQ&si=G6e3Xqgg9Ah6XFyQ', '_blank')"
+                >
+                  <i class="fab fa-youtube text-6xl text-red-600"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-3 text-white">
+                  Cardano Developer Workshop - Indonesia Community
+                </h3>
+                <p class="text-gray-400 text-sm mb-4">
+                  Online workshop series for the Indonesian Cardano developer
+                  community, covering thebasics of dApps development using
+                  Cardano techstack such as Mesh.js Web3 Library, Blockfrost
+                  API, and Aiken smart contract.
+                </p>
+                <a
+                  href="https://youtube.com/playlist?list=PLUj8499OocHiL8gXPv8wMlLW-zIcyYdrQ&si=G6e3Xqgg9Ah6XFyQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  <i class="fab fa-youtube"></i>
+                  <span>Watch on YouTube</span>
+                  <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-gray-800/50">
+      <div class="container mx-auto px-6">
+        <div class="fade-in">
+          <h2 class="text-4xl font-bold text-center mb-16">
+            Certificates & <span class="text-primary">Credentials</span>
+          </h2>
+          <div
+            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto"
+          >
+            <!-- Certificate 1: Binar Academy -->
+            <a
+              href="https://drive.google.com/file/d/1aFy7gpU0_kuujYrd3jllE1JEuGTu4neM/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative bg-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30"
+            >
+              <div
+                class="aspect-square bg-gray-100 flex items-center justify-center p-4"
+              >
+                <img
+                  src="public/certificate-binar-fullstackdev.png"
+                  alt="Full-Stack Web Developer"
+                  class="w-full h-full object-contain"
+                  onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fas fa-certificate text-6xl text-primary mb-4\'></i><p class=\'text-gray-600 text-center text-sm\'>Full-Stack Web Developer</p></div>'"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6"
+              >
+                <div class="text-white text-center px-4">
+                  <p class="font-semibold text-sm">View Credential</p>
+                  <i class="fas fa-external-link-alt text-xs mt-2"></i>
+                </div>
+              </div>
+              <div class="p-4 bg-white">
+                <h3 class="font-bold text-gray-800 text-sm mb-1">
+                  Full-Stack Web Developer
+                </h3>
+                <p class="text-gray-600 text-xs">Binar Academy</p>
+              </div>
+            </a>
+
+            <!-- Certificate 2: Cardano Foundation -->
+            <a
+              href="https://drive.google.com/file/d/1Z853mM_lVcuyHP4S9lEB43vKpEFTlCOv/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative bg-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30"
+            >
+              <div
+                class="aspect-square bg-gray-100 flex items-center justify-center p-4"
+              >
+                <img
+                  src="public/certificate-cardano-academy.png"
+                  alt="Cardano Blockchain Certified Associate"
+                  class="w-full h-full object-contain"
+                  onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fas fa-certificate text-6xl text-primary mb-4\'></i><p class=\'text-gray-600 text-center text-sm\'>Cardano Blockchain Certified Associate</p></div>'"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6"
+              >
+                <div class="text-white text-center px-4">
+                  <p class="font-semibold text-sm">View Credential</p>
+                  <i class="fas fa-external-link-alt text-xs mt-2"></i>
+                </div>
+              </div>
+              <div class="p-4 bg-white">
+                <h3 class="font-bold text-gray-800 text-sm mb-1">
+                  Cardano Blockchain Associate
+                </h3>
+                <p class="text-gray-600 text-xs">Cardano Foundation</p>
+              </div>
+            </a>
+
+            <!-- Certificate 3: Emurgo Academy - Associate -->
+            <a
+              href="https://www.credly.com/badges/f8353c5f-0408-4419-8973-3d8888bbc3c2/public_url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative bg-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30"
+            >
+              <div
+                class="aspect-square bg-gray-100 flex items-center justify-center p-4"
+              >
+                <img
+                  src="public/certificate-emurgo-academy-ccda.png"
+                  alt="Certified Cardano Developer Associate"
+                  class="w-full h-full object-contain"
+                  onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fas fa-certificate text-6xl text-primary mb-4\'></i><p class=\'text-gray-600 text-center text-sm\'>Certified Cardano Developer Associate</p></div>'"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6"
+              >
+                <div class="text-white text-center px-4">
+                  <p class="font-semibold text-sm">View Credential</p>
+                  <i class="fas fa-external-link-alt text-xs mt-2"></i>
+                </div>
+              </div>
+              <div class="p-4 bg-white">
+                <h3 class="font-bold text-gray-800 text-sm mb-1">
+                  Cardano Developer Associate
+                </h3>
+                <p class="text-gray-600 text-xs">Emurgo Academy</p>
+              </div>
+            </a>
+
+            <!-- Certificate 4: Emurgo Academy - Professional -->
+            <a
+              href="https://www.credly.com/badges/5fd23cfa-78bc-4f83-91d3-73c99237e14c/public_url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative bg-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30"
+            >
+              <div
+                class="aspect-square bg-gray-100 flex items-center justify-center p-4"
+              >
+                <img
+                  src="public/certificate-emurgo-academy-ccdp.png"
+                  alt="Certified Cardano Developer Professional"
+                  class="w-full h-full object-contain"
+                  onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fas fa-certificate text-6xl text-primary mb-4\'></i><p class=\'text-gray-600 text-center text-sm\'>Certified Cardano Developer Professional</p></div>'"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6"
+              >
+                <div class="text-white text-center px-4">
+                  <p class="font-semibold text-sm">View Credential</p>
+                  <i class="fas fa-external-link-alt text-xs mt-2"></i>
+                </div>
+              </div>
+              <div class="p-4 bg-white">
+                <h3 class="font-bold text-gray-800 text-sm mb-1">
+                  Cardano Developer Professional
+                </h3>
+                <p class="text-gray-600 text-xs">Emurgo Academy</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="clients" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="fade-in">
+          <h2 class="text-4xl font-bold text-center mb-6">
+            Trusted <span class="text-primary">Partners</span>
+          </h2>
+          <p
+            class="text-center text-sm md:text-lg text-gray-300 mb-16 max-w-2xl mx-auto"
+          >
+            I'm proud to collaborate with diverse organizations to deliver
+            impactful solutions and share my knowledge.
+          </p>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto"
+          >
+            <!-- 1. Maranatha Christian University - Educational Institution (Highest prestige) -->
+            <a
+              href="https://www.maranatha.edu/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-gray-900/50 rounded-xl p-8 flex items-center justify-center hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <img
+                src="public/maranatha.png"
+                alt="Maranatha Christian University Logo"
+                class="max-w-full h-auto max-h-32 object-contain transition-all duration-300 rounded-full"
+              />
+            </a>
+            <!-- 2. Open Heaven Foundation - Non-profit Organization -->
+            <a
+              href="https://foundationopenheaven.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-gray-900/50 rounded-xl p-8 flex items-center justify-center hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <img
+                src="public/openheaven.png"
+                alt="Open Heaven Logo"
+                class="max-w-full h-auto max-h-32 object-contain transition-all duration-300 rounded-full"
+              />
+            </a>
+            <!-- 3. The Portrait Place - Business Client -->
+            <a
+              href="https://www.instagram.com/theportraitplace.id/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-gray-900/50 rounded-xl p-8 flex items-center justify-center hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <img
+                src="public/portraitplace.png"
+                alt="The Portrait Place Logo"
+                class="max-w-full h-auto max-h-32 object-contain transition-all duration-300 rounded-full"
+              />
+            </a>
+            <!-- 4. Greenfee - Business Client -->
+            <a
+              href="https://www.instagram.com/greenfee_shoes_clean/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-gray-900/50 rounded-xl p-8 flex items-center justify-center hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <img
+                src="public/greenfee.png"
+                alt="Greenfee Logo"
+                class="max-w-full h-auto max-h-32 object-contain transition-all duration-300 rounded-full"
+              />
+            </a>
+            <!-- 5. Cardano Indonesia - Community (Related to your blockchain expertise) -->
+            <a
+              href="https://t.me/CardanoIndonesiaOfficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-gray-900/50 rounded-xl p-8 flex items-center justify-center hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <img
+                src="public/cardanoid.png"
+                alt="Cardano Indonesia Logo"
+                class="max-w-full h-auto max-h-32 object-contain transition-all duration-300 rounded-full"
+              />
+            </a>
+            <!-- 6. Cardano Developer Indonesia - Community (Related to your blockchain expertise) -->
+            <a
+              href="https://t.me/CardanoDevID"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-gray-900/50 rounded-xl p-8 flex items-center justify-center hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <img
+                src="public/cardanodev.jpg"
+                alt="Cardano Developer Indonesia Logo"
+                class="max-w-full h-auto max-h-32 object-contain transition-all duration-300 rounded-full"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-800 border-t border-gray-700">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+            <p class="text-gray-400">
+              &copy; 2024 Valdryan Ivandito. All rights reserved.
+            </p>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="https://github.com/valdryanivandito"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-primary transition-colors"
+              title="GitHub"
+            >
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a
+              href="https://t.me/valdryan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-blue-400 transition-colors"
+              title="Telegram"
+            >
+              <i class="fab fa-telegram text-xl"></i>
+            </a>
+            <a
+              href="https://discord.com/users/Valdryan08#9209"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-indigo-500 transition-colors"
+              title="Discord"
+            >
+              <i class="fab fa-discord text-xl"></i>
+            </a>
+            <a
+              href="https://x.com/miraclemonad"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-gray-200 transition-colors"
+              title="X (Twitter)"
+            >
+              <i class="fab fa-x-twitter text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div
+      id="videoModal"
+      class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4"
+    >
+      <div class="glass-effect rounded-xl p-6 max-w-4xl w-full">
+        <div class="flex justify-between items-center mb-4">
+          <h3 id="modalTitle" class="text-2xl font-bold text-white"></h3>
+          <button
+            onclick="closeVideoModal()"
+            class="text-white hover:text-primary text-2xl"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden">
+          <iframe
+            id="modalVideo"
+            class="w-full h-full"
+            src=""
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            webkitallowfullscreen
+            mozallowfullscreen
+          ></iframe>
+        </div>
+        <div id="modalDescription" class="mt-4 text-gray-300"></div>
+      </div>
+    </div>
+
+    <script>
+      // Typing Animation
+      const texts = ["Fullstack Developer", "Cardano Blockchain Educator"];
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typingElement = document.getElementById("typing-text");
+
+      function typeText() {
+        const currentText = texts[textIndex];
+
+        if (isDeleting) {
+          typingElement.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          typingElement.textContent = currentText.substring(0, charIndex + 1);
+          charIndex++;
+        }
+
+        let typeSpeed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentText.length) {
+          typeSpeed = 2000;
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % texts.length;
+          typeSpeed = 500;
+        }
+
+        setTimeout(typeText, typeSpeed);
+      }
+
+      // Start typing animation
+      typeText();
+
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all fade-in elements
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            // Close mobile menu if open
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      // Portfolio data - Edit this to update your projects
+      const portfolioData = {
+        project1: {
+          title: "Photo Studio Booking and Management System",
+          description:
+            "Booking System for Photo Studio with payment gateway and admin dashboard.",
+          video: "https://www.youtube.com/embed/TXnIQRIDI98",
+          gradient: "from-primary to-secondary",
+          technologies: [
+            { name: "Next.js", color: "primary" },
+            { name: "TailwindCSS", color: "primary" },
+            { name: "Prisma", color: "primary" },
+            { name: "PostgreSQL", color: "primary" },
+          ],
+        },
+        project2: {
+          title: "Photobooth User Interface and Payment System",
+          description:
+            "Photobooth (Desktop Application) for user interface and payment system.",
+          video: "https://www.youtube.com/embed/Hk-sUS1H9Jw",
+          gradient: "from-accent to-orange-600",
+          technologies: [
+            { name: "Electron.js", color: "accent" },
+            { name: "HTML", color: "accent" },
+            { name: "TailwindCSS", color: "accent" },
+            { name: "Node.js", color: "accent" },
+            { name: "PostgreSQL", color: "accent" },
+          ],
+        },
+        project3: {
+          title: "Shoe Laundry Management System",
+          description:
+            "Managing shoe laundry business with order management and tracking progress.",
+          video: "https://www.youtube.com/embed/uD5TgmOTBP4",
+          gradient: "from-green-500 to-emerald-600",
+          technologies: [
+            { name: "Next.js", color: "green-500" },
+            { name: "TailwindCSS", color: "green-500" },
+            { name: "Prisma", color: "green-500" },
+            { name: "PostgreSQL", color: "green-500" },
+          ],
+        },
+        project4: {
+          title: "Open Heaven Foundation Website",
+          description:
+            "Open Heaven Foundation responsive website with i18Next for multilingual support.",
+          video: "https://www.youtube.com/embed/UshzC-slIVs",
+          gradient: "from-purple-500 to-pink-600",
+          technologies: [
+            { name: "Next.js", color: "purple-500" },
+            { name: "TailwindCSS", color: "purple-500" },
+            { name: "i18Next", color: "purple-500" },
+          ],
+        },
+      };
+
+      // Generate portfolio cards dynamically
+      function generatePortfolioCards() {
+        const portfolioGrid = document.getElementById("portfolio-grid");
+        portfolioGrid.innerHTML = "";
+
+        Object.keys(portfolioData).forEach((projectId) => {
+          const project = portfolioData[projectId];
+
+          const techTags = project.technologies
+            .map(
+              (tech) => `
+            <span class="bg-${tech.color}/20 text-${
+                tech.color === "primary"
+                  ? "primary"
+                  : tech.color === "accent"
+                  ? "accent"
+                  : tech.color === "green-500"
+                  ? "green-400"
+                  : "purple-400"
+              } px-3 py-1 rounded-full text-sm">
+              ${tech.name}
+            </span>
+          `
+            )
+            .join("");
+
+          // Extract YouTube video ID from embed URL
+          const videoId = project.video.split("/embed/")[1];
+          const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+          const card = `
+            <div class="group relative bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+              <div class="aspect-video relative bg-gray-900">
+                <img src="${thumbnailUrl}" alt="${project.title}" class="w-full h-full object-cover" onerror="this.src='https://img.youtube.com/vi/${videoId}/hqdefault.jpg'" />
+                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                  <i class="fas fa-play text-4xl text-white group-hover:scale-110 transition-transform"></i>
+                </div>
+              </div>
+              <div class="absolute inset-0 video-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer" onclick="openVideoModal('${projectId}')">
+                <i class="fas fa-play text-6xl text-white"></i>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                <p class="text-gray-400 mb-4">${project.description}</p>
+                <div class="flex flex-wrap gap-2">
+                  ${techTags}
+                </div>
+              </div>
+            </div>
+          `;
+
+          portfolioGrid.innerHTML += card;
+        });
+      }
+
+      // Initialize portfolio cards on page load
+      generatePortfolioCards();
+
+      function openVideoModal(projectId) {
+        const modal = document.getElementById("videoModal");
+        const title = document.getElementById("modalTitle");
+        const description = document.getElementById("modalDescription");
+        const videoElement = document.getElementById("modalVideo");
+
+        const project = portfolioData[projectId];
+        title.textContent = project.title;
+        description.textContent = project.description;
+
+        // Set YouTube video source with proper embed parameters
+        const videoUrl =
+          project.video + "?autoplay=1&rel=0&modestbranding=1&enablejsapi=1";
+        videoElement.src = videoUrl;
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeVideoModal() {
+        const modal = document.getElementById("videoModal");
+        const videoElement = document.getElementById("modalVideo");
+
+        // Stop video by clearing src
+        videoElement.src = "";
+
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.body.style.overflow = "auto";
+      }
+
+      // Close modal on escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeVideoModal();
+        }
+      });
+
+      // Close modal on backdrop click
+      document.getElementById("videoModal").addEventListener("click", (e) => {
+        if (e.target === e.currentTarget) {
+          closeVideoModal();
+        }
+      });
+
+      // Form submission
+      function handleSubmit(event) {
+        event.preventDefault();
+        alert(
+          "Terima kasih! Pesan Anda telah dikirim. Saya akan segera menghubungi Anda kembali."
+        );
+        event.target.reset();
+      }
+
+      // Add navbar background on scroll
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          nav.classList.add("bg-gray-900/95");
+        } else {
+          nav.classList.remove("bg-gray-900/95");
+        }
+      });
+    </script>
+  </body>
+</html>
