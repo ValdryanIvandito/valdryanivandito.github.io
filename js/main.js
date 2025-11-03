@@ -185,6 +185,13 @@ const socialMediaData = {
     hoverColor: "primary", // Tailwind color
     hoverColorHex: "#3B82F6", // For footer
   },
+  whatsapp: {
+    name: "WhatsApp",
+    url: "https://wa.me/6285338003745",
+    icon: "fab fa-whatsapp",
+    hoverColor: "green-500",
+    hoverColorHex: "#22C55E",
+  },
   telegram: {
     name: "Telegram",
     url: "https://t.me/valdryan",
@@ -247,7 +254,7 @@ function generatePortfolioCards() {
 
     // Create card HTML
     const card = `
-      <div class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+      <div class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="window.open('${project.youtubeUrl}', '_blank')">
         <div class="relative aspect-video overflow-hidden">
           <img
             src="${thumbnailUrl}"
@@ -255,8 +262,10 @@ function generatePortfolioCards() {
             class="w-full h-full object-cover"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
-          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 cursor-pointer" onclick="window.open('${project.youtubeUrl}', '_blank')">
-            <i class="fab fa-youtube text-6xl text-red-600"></i>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="bg-white/20 backdrop-blur-sm rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fas fa-play text-white text-base md:text-lg ml-0.5"></i>
+            </div>
           </div>
         </div>
         <div class="p-6">
@@ -292,7 +301,7 @@ function generateContributionCards() {
 
     // Create card HTML
     const card = `
-      <div class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+      <div class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="window.open('${contribution.youtubeUrl}', '_blank')">
         <div class="relative aspect-video overflow-hidden">
           <img
             src="${thumbnailUrl}"
@@ -300,8 +309,10 @@ function generateContributionCards() {
             class="w-full h-full object-cover"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
-          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 cursor-pointer" onclick="window.open('${contribution.youtubeUrl}', '_blank')">
-            <i class="fab fa-youtube text-6xl text-red-600"></i>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="bg-white/20 backdrop-blur-sm rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fas fa-play text-white text-base md:text-lg ml-0.5"></i>
+            </div>
           </div>
         </div>
         <div class="p-6">
@@ -407,6 +418,8 @@ function generateHeroSocialLinks() {
     let hoverBgClass = "";
     if (social.hoverColor === "primary") {
       hoverBgClass = "hover:bg-primary hover:shadow-primary/50";
+    } else if (social.hoverColor === "green-500") {
+      hoverBgClass = "hover:bg-green-500 hover:shadow-green-500/50";
     } else if (social.hoverColor === "blue-400") {
       hoverBgClass = "hover:bg-blue-400 hover:shadow-blue-400/50";
     } else if (social.hoverColor === "indigo-500") {
@@ -447,6 +460,8 @@ function generateFooterSocialLinks() {
     let hoverColorClass = "";
     if (social.hoverColor === "primary") {
       hoverColorClass = "hover:text-primary";
+    } else if (social.hoverColor === "green-500") {
+      hoverColorClass = "hover:text-green-500";
     } else if (social.hoverColor === "blue-400") {
       hoverColorClass = "hover:text-blue-400";
     } else if (social.hoverColor === "indigo-500") {
@@ -590,6 +605,22 @@ function initNavbarScroll() {
   });
 }
 
+/**
+ * Hide Scroll Arrow on Scroll
+ * Hide the scroll arrow when user starts scrolling
+ */
+function initScrollIndicator() {
+  const scrollArrow = document.getElementById("scroll-arrow");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      scrollArrow.classList.add("hide");
+    } else {
+      scrollArrow.classList.remove("hide");
+    }
+  });
+}
+
 // ============================================================================
 // 4. INITIALIZATION - Run all functions when page loads
 // ============================================================================
@@ -613,6 +644,7 @@ function init() {
   initMobileMenu();
   initSmoothScrolling();
   initNavbarScroll();
+  initScrollIndicator();
 }
 
 // Run initialization when DOM is ready

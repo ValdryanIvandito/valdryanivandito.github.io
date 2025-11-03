@@ -92,6 +92,27 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+      /* Simple Scroll Arrow Animation */
+      .scroll-arrow {
+        animation: smoothBounce 2s ease-in-out infinite;
+        transition: opacity 0.5s ease;
+      }
+
+      @keyframes smoothBounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+      }
+
+      .scroll-arrow.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
     </style>
   </head>
   <body class="bg-gray-900 text-white font-sans">
@@ -213,12 +234,12 @@
                 View My Work
               </a>
               <a
-                href="https://t.me/valdryan"
+                href="https://wa.me/6285338003745"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="border border-primary text-primary hover:bg-primary hover:text-white md:px-8 md:py-3 px-4 py-2 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+                class="border border-green-500 text-green-500 hover:bg-green-500 hover:text-white md:px-8 md:py-3 px-4 py-2 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
               >
-                <i class="fab fa-telegram"></i>
+                <i class="fab fa-whatsapp"></i>
                 Contact Me
               </a>
             </div>
@@ -237,10 +258,21 @@
           class="absolute bottom-20 left-20 w-16 h-16 bg-secondary/10 rounded-full animate-pulse delay-2000"
         ></div>
       </div>
+
+      <!-- Simple Scroll Arrow -->
+      <div
+        id="scroll-arrow"
+        class="scroll-arrow absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer z-20"
+        onclick="window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })"
+      >
+        <i
+          class="fas fa-chevron-down text-2xl text-gray-400 hover:text-primary transition-colors"
+        ></i>
+      </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20">
+    <section id="portfolio" class="py-20 relative">
       <div class="container mx-auto px-6">
         <div class="fade-in">
           <h2 class="text-4xl font-bold text-center mb-16">
@@ -250,10 +282,19 @@
           <div id="portfolio-grid" class="grid md:grid-cols-2 gap-8"></div>
         </div>
       </div>
+      <!-- Scroll Arrow -->
+      <div
+        class="scroll-arrow absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer z-20"
+        onclick="document.getElementById('education').scrollIntoView({ behavior: 'smooth' })"
+      >
+        <i
+          class="fas fa-chevron-down text-2xl text-gray-400 hover:text-primary transition-colors"
+        ></i>
+      </div>
     </section>
 
     <!-- Contribution & Dedication Section -->
-    <section id="education" class="py-20 bg-gray-900/50">
+    <section id="education" class="py-20 bg-gray-900/50 relative">
       <div class="container mx-auto px-6">
         <div class="fade-in">
           <h2 class="text-4xl font-bold text-center mb-16">
@@ -266,10 +307,19 @@
           ></div>
         </div>
       </div>
+      <!-- Scroll Arrow -->
+      <div
+        class="scroll-arrow absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer z-20"
+        onclick="document.getElementById('certificates').scrollIntoView({ behavior: 'smooth' })"
+      >
+        <i
+          class="fas fa-chevron-down text-2xl text-gray-400 hover:text-primary transition-colors"
+        ></i>
+      </div>
     </section>
 
     <!-- Certificates Section -->
-    <section id="certificates" class="py-20 bg-gray-800/50">
+    <section id="certificates" class="py-20 bg-gray-800/50 relative">
       <div class="container mx-auto px-6">
         <div class="fade-in">
           <h2 class="text-4xl font-bold text-center mb-16">
@@ -281,6 +331,15 @@
             class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto"
           ></div>
         </div>
+      </div>
+      <!-- Scroll Arrow -->
+      <div
+        class="scroll-arrow absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer z-20"
+        onclick="document.getElementById('clients').scrollIntoView({ behavior: 'smooth' })"
+      >
+        <i
+          class="fas fa-chevron-down text-2xl text-gray-400 hover:text-primary transition-colors"
+        ></i>
       </div>
     </section>
 
