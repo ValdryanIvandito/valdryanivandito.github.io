@@ -33,9 +33,8 @@ const portfolioData = {
     youtubeUrl: "https://youtu.be/Hk-sUS1H9Jw",
     technologies: [
       { name: "Electron.js", color: "accent" },
-      { name: "HTML", color: "accent" },
-      { name: "TailwindCSS", color: "accent" },
       { name: "Node.js", color: "accent" },
+      { name: "Express.js", color: "accent" },
       { name: "PostgreSQL", color: "accent" },
     ],
   },
