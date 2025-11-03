@@ -206,13 +206,13 @@ const socialMediaData = {
     hoverColor: "indigo-500",
     hoverColorHex: "#6366F1",
   },
-  x: {
-    name: "X (Twitter)",
-    url: "https://x.com/miraclemonad",
-    icon: "fab fa-x-twitter",
-    hoverColor: "gray-200",
-    hoverColorHex: "#E5E7EB",
-  },
+  // x: {
+  //   name: "X (Twitter)",
+  //   url: "https://x.com/miraclemonad",
+  //   icon: "fab fa-x-twitter",
+  //   hoverColor: "gray-200",
+  //   hoverColorHex: "#E5E7EB",
+  // },
 };
 
 // ============================================================================
