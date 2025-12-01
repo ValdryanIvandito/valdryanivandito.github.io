@@ -215,13 +215,6 @@ const socialMediaData = {
     hoverColor: "blue-400",
     hoverColorHex: "#60A5FA",
   },
-  whatsapp: {
-    name: "WhatsApp",
-    url: "https://wa.me/6285338003745",
-    icon: "fab fa-whatsapp",
-    hoverColor: "green-500",
-    hoverColorHex: "#22C55E",
-  },
   // x: {
   //   name: "X (Twitter)",
   //   url: "https://x.com/miraclemonad",
