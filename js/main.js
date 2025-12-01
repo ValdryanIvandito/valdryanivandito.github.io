@@ -18,11 +18,14 @@ const portfolioData = {
       "Booking System for Photo Studio with payment gateway and admin dashboard.",
     videoId: "TXnIQRIDI98",
     youtubeUrl: "https://youtu.be/TXnIQRIDI98",
+    documentationUrl:
+      "https://drive.google.com/file/d/1teT4fbI4uwbhQxvWmxY5UDTU_w35OoS0/view?usp=sharing",
     technologies: [
       { name: "Next.js", color: "primary" },
       { name: "TailwindCSS", color: "primary" },
       { name: "Prisma", color: "primary" },
       { name: "PostgreSQL", color: "primary" },
+      { name: "Midtrans", color: "primary" },
     ],
   },
   project2: {
@@ -31,11 +34,14 @@ const portfolioData = {
       "Photobooth (Desktop Application) for user interface and payment system.",
     videoId: "Hk-sUS1H9Jw",
     youtubeUrl: "https://youtu.be/Hk-sUS1H9Jw",
+    documentationUrl:
+      "https://drive.google.com/file/d/1teT4fbI4uwbhQxvWmxY5UDTU_w35OoS0/view?usp=sharing",
     technologies: [
       { name: "Electron.js", color: "accent" },
       { name: "Node.js", color: "accent" },
       { name: "Express.js", color: "accent" },
       { name: "PostgreSQL", color: "accent" },
+      { name: "Xendit", color: "accent" },
     ],
   },
   project3: {
@@ -44,6 +50,8 @@ const portfolioData = {
       "Managing shoe laundry business with order management and tracking progress.",
     videoId: "uD5TgmOTBP4",
     youtubeUrl: "https://youtu.be/uD5TgmOTBP4",
+    documentationUrl:
+      "https://drive.google.com/file/d/1teT4fbI4uwbhQxvWmxY5UDTU_w35OoS0/view?usp=sharing",
     technologies: [
       { name: "Next.js", color: "green-500" },
       { name: "TailwindCSS", color: "green-500" },
@@ -57,6 +65,8 @@ const portfolioData = {
       "Open Heaven Foundation responsive website with i18Next for multilingual support.",
     videoId: "UshzC-slIVs",
     youtubeUrl: "https://youtu.be/UshzC-slIVs",
+    documentationUrl:
+      "https://drive.google.com/file/d/1teT4fbI4uwbhQxvWmxY5UDTU_w35OoS0/view?usp=sharing",
     technologies: [
       { name: "Next.js", color: "purple-500" },
       { name: "TailwindCSS", color: "purple-500" },
@@ -184,12 +194,19 @@ const socialMediaData = {
     hoverColor: "primary", // Tailwind color
     hoverColorHex: "#3B82F6", // For footer
   },
-  whatsapp: {
-    name: "WhatsApp",
-    url: "https://wa.me/6285338003745",
-    icon: "fab fa-whatsapp",
-    hoverColor: "green-500",
-    hoverColorHex: "#22C55E",
+  linkedin: {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/valdryan-ivandito-110b9b392/",
+    icon: "fab fa-linkedin",
+    hoverColor: "blue-600",
+    hoverColorHex: "#2563EB",
+  },
+  discord: {
+    name: "Discord",
+    url: "https://discord.com/users/Valdryan08#9209",
+    icon: "fab fa-discord",
+    hoverColor: "indigo-500",
+    hoverColorHex: "#6366F1",
   },
   telegram: {
     name: "Telegram",
@@ -198,12 +215,12 @@ const socialMediaData = {
     hoverColor: "blue-400",
     hoverColorHex: "#60A5FA",
   },
-  discord: {
-    name: "Discord",
-    url: "https://discord.com/users/Valdryan08#9209",
-    icon: "fab fa-discord",
-    hoverColor: "indigo-500",
-    hoverColorHex: "#6366F1",
+  whatsapp: {
+    name: "WhatsApp",
+    url: "https://wa.me/6285338003745",
+    icon: "fab fa-whatsapp",
+    hoverColor: "green-500",
+    hoverColorHex: "#22C55E",
   },
   // x: {
   //   name: "X (Twitter)",
@@ -253,8 +270,8 @@ function generatePortfolioCards() {
 
     // Create card HTML
     const card = `
-      <div class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="window.open('${project.youtubeUrl}', '_blank')">
-        <div class="relative aspect-video overflow-hidden">
+      <div class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+        <div class="relative aspect-video overflow-hidden cursor-pointer" onclick="window.open('${project.youtubeUrl}', '_blank')">
           <img
             src="${thumbnailUrl}"
             alt="${project.title}"
@@ -270,9 +287,20 @@ function generatePortfolioCards() {
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-3 text-white">${project.title}</h3>
           <p class="text-gray-400 text-sm mb-4">${project.description}</p>
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-2 mb-4">
             ${techTags}
           </div>
+          <a
+            href="${project.documentationUrl}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/50 text-primary transition-all text-sm group/doc mt-2"
+            onclick="event.stopPropagation()"
+          >
+            <i class="fas fa-file-alt"></i>
+            <span class="font-medium">View Documentation</span>
+            <i class="fas fa-arrow-right text-xs group-hover/doc:translate-x-1 transition-transform"></i>
+          </a>
         </div>
       </div>
     `;
@@ -417,6 +445,8 @@ function generateHeroSocialLinks() {
     let hoverBgClass = "";
     if (social.hoverColor === "primary") {
       hoverBgClass = "hover:bg-primary hover:shadow-primary/50";
+    } else if (social.hoverColor === "blue-600") {
+      hoverBgClass = "hover:bg-blue-600 hover:shadow-blue-600/50";
     } else if (social.hoverColor === "green-500") {
       hoverBgClass = "hover:bg-green-500 hover:shadow-green-500/50";
     } else if (social.hoverColor === "blue-400") {
@@ -459,6 +489,8 @@ function generateFooterSocialLinks() {
     let hoverColorClass = "";
     if (social.hoverColor === "primary") {
       hoverColorClass = "hover:text-primary";
+    } else if (social.hoverColor === "blue-600") {
+      hoverColorClass = "hover:text-blue-600";
     } else if (social.hoverColor === "green-500") {
       hoverColorClass = "hover:text-green-500";
     } else if (social.hoverColor === "blue-400") {
