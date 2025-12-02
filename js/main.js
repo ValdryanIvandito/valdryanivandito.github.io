@@ -19,7 +19,7 @@ const portfolioData = {
     videoId: "TXnIQRIDI98",
     youtubeUrl: "https://youtu.be/TXnIQRIDI98",
     documentationUrl:
-      "https://drive.google.com/file/d/1teT4fbI4uwbhQxvWmxY5UDTU_w35OoS0/view?usp=sharing",
+      "https://drive.google.com/file/d/1mnuKzhMEY6VvDFmJlVdzwHtOIA9NCBDT/view?usp=sharing",
     technologies: [
       { name: "Next.js", color: "primary" },
       { name: "TailwindCSS", color: "primary" },
@@ -35,7 +35,7 @@ const portfolioData = {
     videoId: "Hk-sUS1H9Jw",
     youtubeUrl: "https://youtu.be/Hk-sUS1H9Jw",
     documentationUrl:
-      "https://drive.google.com/file/d/1teT4fbI4uwbhQxvWmxY5UDTU_w35OoS0/view?usp=sharing",
+      "https://drive.google.com/file/d/1uFNBNG3iu58LrrFZ2b5_xWnhFfQv9--S/view?usp=sharing",
     technologies: [
       { name: "Electron.js", color: "accent" },
       { name: "Node.js", color: "accent" },
@@ -51,7 +51,7 @@ const portfolioData = {
     videoId: "uD5TgmOTBP4",
     youtubeUrl: "https://youtu.be/uD5TgmOTBP4",
     documentationUrl:
-      "https://drive.google.com/file/d/1teT4fbI4uwbhQxvWmxY5UDTU_w35OoS0/view?usp=sharing",
+      "https://drive.google.com/file/d/1ru9wg9ITh23Tu9ema5yYe5WbjTe-3yZr/view?usp=sharing",
     technologies: [
       { name: "Next.js", color: "green-500" },
       { name: "TailwindCSS", color: "green-500" },
@@ -66,7 +66,7 @@ const portfolioData = {
     videoId: "UshzC-slIVs",
     youtubeUrl: "https://youtu.be/UshzC-slIVs",
     documentationUrl:
-      "https://drive.google.com/file/d/1teT4fbI4uwbhQxvWmxY5UDTU_w35OoS0/view?usp=sharing",
+      "https://drive.google.com/file/d/1Ac2VddydoUOdHyRgMJ9gGSjtkrEiVI6z/view?usp=sharing",
     technologies: [
       { name: "Next.js", color: "purple-500" },
       { name: "TailwindCSS", color: "purple-500" },
@@ -86,6 +86,8 @@ const contributionData = {
     youtubeUrl:
       "https://youtu.be/yRT-gyJnk-Y?list=PLUj8499OocHgfSDHvtuMZ56zBdK8tw3OG",
     thumbnailType: "youtube", // "youtube" or "custom"
+    documentationUrl:
+      "https://forum.cardano.org/t/levvy-masterclass-how-to-become-profitable-lender/144499", // Add your documentation URL here
   },
   contribution2: {
     title: "DeFi Odyssey at Maranatha Christian University",
@@ -94,15 +96,20 @@ const contributionData = {
     videoId: "0i84ZwIpvxc",
     youtubeUrl: "https://youtu.be/0i84ZwIpvxc",
     thumbnailType: "youtube",
+    documentationUrl:
+      "https://forum.cardano.org/t/cardano-defi-workshop-defi-odyssey-2025/144483", // Add your documentation URL here
   },
   contribution3: {
-    title: "Cardano Developer Workshop - Maranatha Christian University",
+    title:
+      "Cardano Developer Workshop & Mini Hackathon - Maranatha Christian University",
     description:
       "Comprehensive workshop series teaching students at Maranatha Christian University the basics of dApps development using Cardano techstack such as Mesh.js Web3 Library, Blockfrost API, and Aiken smart contract.",
     thumbnailUrl: "public/maranatha.png",
     youtubeUrl:
       "https://youtube.com/playlist?list=PLUj8499OocHiU1ynKh0eWNybchcUG3rY9&si=IcYzmIpTrNDJicxQ",
     thumbnailType: "custom",
+    documentationUrl:
+      "https://forum.cardano.org/t/cardano-developer-minihackathon-at-maranatha-christian-university-october-2-2024-january-17-2025/142683", // Add your documentation URL here
   },
   contribution4: {
     title: "Cardano Developer Workshop - Indonesia Community",
@@ -112,6 +119,8 @@ const contributionData = {
     youtubeUrl:
       "https://youtube.com/playlist?list=PLUj8499OocHiL8gXPv8wMlLW-zIcyYdrQ&si=G6e3Xqgg9Ah6XFyQ",
     thumbnailType: "custom",
+    documentationUrl:
+      "https://forum.cardano.org/t/cardano-blockchain-jakarta-meetup-1-cardano-developers-community-indonesia-november-2023/123530", // Add your documentation URL here
   },
 };
 
@@ -283,17 +292,30 @@ function generatePortfolioCards() {
           <div class="flex flex-wrap gap-2 mb-4">
             ${techTags}
           </div>
-          <a
-            href="${project.documentationUrl}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/50 text-primary transition-all text-sm group/doc mt-2"
-            onclick="event.stopPropagation()"
-          >
-            <i class="fas fa-file-alt"></i>
-            <span class="font-medium">View Documentation</span>
-            <i class="fas fa-arrow-right text-xs group-hover/doc:translate-x-1 transition-transform"></i>
-          </a>
+          <div class="flex flex-wrap gap-3 mt-2">
+            <a
+              href="${project.youtubeUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-accent/30 bg-accent/5 hover:bg-accent/10 hover:border-accent/50 text-accent transition-all text-sm group/demo"
+              onclick="event.stopPropagation()"
+            >
+              <i class="fas fa-play"></i>
+              <span class="font-medium">Watch Video</span>
+              <i class="fas fa-arrow-right text-xs group-hover/demo:translate-x-1 transition-transform"></i>
+            </a>
+            <a
+              href="${project.documentationUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/50 text-primary transition-all text-sm group/doc"
+              onclick="event.stopPropagation()"
+            >
+              <i class="fas fa-file-alt"></i>
+              <span class="font-medium">View Documentation</span>
+              <i class="fas fa-arrow-right text-xs group-hover/doc:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
         </div>
       </div>
     `;
@@ -319,10 +341,41 @@ function generateContributionCards() {
         ? `https://img.youtube.com/vi/${contribution.videoId}/hqdefault.jpg`
         : contribution.thumbnailUrl;
 
+    // Generate Watch Video button
+    const watchVideoButton = `
+          <a
+            href="${contribution.youtubeUrl}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-accent/30 bg-accent/5 hover:bg-accent/10 hover:border-accent/50 text-accent transition-all text-sm group/demo"
+            onclick="event.stopPropagation()"
+          >
+            <i class="fas fa-play"></i>
+            <span class="font-medium">Watch Video</span>
+            <i class="fas fa-arrow-right text-xs group-hover/demo:translate-x-1 transition-transform"></i>
+          </a>
+        `;
+
+    // Generate documentation button - use documentationUrl if available, otherwise use youtubeUrl
+    const docUrl = contribution.documentationUrl || contribution.youtubeUrl;
+    const documentationButton = `
+          <a
+            href="${docUrl}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/50 text-primary transition-all text-sm group/doc"
+            onclick="event.stopPropagation()"
+          >
+            <i class="fas fa-file-alt"></i>
+            <span class="font-medium">View Documentation</span>
+            <i class="fas fa-arrow-right text-xs group-hover/doc:translate-x-1 transition-transform"></i>
+          </a>
+        `;
+
     // Create card HTML
     const card = `
-      <div class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="window.open('${contribution.youtubeUrl}', '_blank')">
-        <div class="relative aspect-video overflow-hidden">
+      <div class="group bg-gray-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+        <div class="relative aspect-video overflow-hidden cursor-pointer" onclick="window.open('${contribution.youtubeUrl}', '_blank')">
           <img
             src="${thumbnailUrl}"
             alt="${contribution.title}"
@@ -338,6 +391,10 @@ function generateContributionCards() {
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-3 text-white">${contribution.title}</h3>
           <p class="text-gray-400 text-sm">${contribution.description}</p>
+          <div class="flex flex-wrap gap-3 mt-4">
+            ${watchVideoButton}
+            ${documentationButton}
+          </div>
         </div>
       </div>
     `;
