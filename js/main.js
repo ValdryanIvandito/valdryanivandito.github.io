@@ -68,23 +68,23 @@ const portfolioData = {
     ],
   },
 
-  project4: {
-    title: "Shoe Laundry Management System",
-    description:
-      "A business management platform for shoe laundry services enabling order tracking, workflow monitoring, and operational process management.",
-    videoId: "uD5TgmOTBP4",
-    youtubeUrl: "https://youtu.be/uD5TgmOTBP4",
-    documentationUrl:
-      "https://drive.google.com/file/d/1ru9wg9ITh23Tu9ema5yYe5WbjTe-3yZr/view?usp=sharing",
-    technologies: [
-      { name: "Next.js", color: "green-500" },
-      { name: "TailwindCSS", color: "green-500" },
-      { name: "PrismaORM", color: "green-500" },
-      { name: "PostgreSQL", color: "green-500" },
-    ],
-  },
+  // project4: {
+  //   title: "Shoe Laundry Management System",
+  //   description:
+  //     "A business management platform for shoe laundry services enabling order tracking, workflow monitoring, and operational process management.",
+  //   videoId: "uD5TgmOTBP4",
+  //   youtubeUrl: "https://youtu.be/uD5TgmOTBP4",
+  //   documentationUrl:
+  //     "https://drive.google.com/file/d/1ru9wg9ITh23Tu9ema5yYe5WbjTe-3yZr/view?usp=sharing",
+  //   technologies: [
+  //     { name: "Next.js", color: "green-500" },
+  //     { name: "TailwindCSS", color: "green-500" },
+  //     { name: "PrismaORM", color: "green-500" },
+  //     { name: "PostgreSQL", color: "green-500" },
+  //   ],
+  // },
 
-  project5: {
+  project4: {
     title: "Open Heaven Foundation Website",
     description:
       "A responsive multilingual foundation website built with modern frontend technologies and internationalization support to enhance accessibility and user experience.",
@@ -200,17 +200,17 @@ const partnersData = {
     logoUrl: "public/portraitplace.png",
     websiteUrl: "https://www.instagram.com/theportraitplace.id/",
   },
+  // partner4: {
+  //   name: "Greenfee",
+  //   logoUrl: "public/greenfee.png",
+  //   websiteUrl: "https://www.instagram.com/greenfee_shoes_clean/",
+  // },
   partner4: {
-    name: "Greenfee",
-    logoUrl: "public/greenfee.png",
-    websiteUrl: "https://www.instagram.com/greenfee_shoes_clean/",
-  },
-  partner5: {
     name: "Cardano Indonesia",
     logoUrl: "public/cardanoid.png",
     websiteUrl: "https://t.me/CardanoIndonesiaOfficial",
   },
-  partner6: {
+  partner5: {
     name: "Cardano Developer Indonesia",
     logoUrl: "public/cardanodev.jpg",
     websiteUrl: "https://t.me/CardanoDevID",
