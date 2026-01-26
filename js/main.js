@@ -15,7 +15,7 @@ const portfolioData = {
   project1: {
     title: "NFC Attendance System",
     description:
-      "An enterprise-level NFC-based attendance system integrating Electron desktop applications with a React and Node.js web platform. Designed for real-time attendance tracking and direct hardware communication.",
+      "NFC-based attendance system integrating Electron desktop applications with a React and Node.js. Designed for real-time attendance tracking and direct hardware communication.",
     videoId: "AFDV0ptgiMs",
     youtubeUrl: "https://youtu.be/AFDV0ptgiMs",
     documentationUrl:
