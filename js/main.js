@@ -185,17 +185,17 @@ const certificatesData = {
 // Partners Data
 // Add/edit/remove partners here
 const partnersData = {
+  // partner1: {
+  //   name: "Maranatha Christian University",
+  //   logoUrl: "public/maranatha.png",
+  //   websiteUrl: "https://www.maranatha.edu/en/",
+  // },
   partner1: {
-    name: "Maranatha Christian University",
-    logoUrl: "public/maranatha.png",
-    websiteUrl: "https://www.maranatha.edu/en/",
-  },
-  partner2: {
     name: "Open Heaven Foundation",
     logoUrl: "public/openheaven.png",
     websiteUrl: "https://foundationopenheaven.org/",
   },
-  partner3: {
+  partner2: {
     name: "The Portrait Place",
     logoUrl: "public/portraitplace.png",
     websiteUrl: "https://www.instagram.com/theportraitplace.id/",
@@ -205,12 +205,12 @@ const partnersData = {
   //   logoUrl: "public/greenfee.png",
   //   websiteUrl: "https://www.instagram.com/greenfee_shoes_clean/",
   // },
-  partner4: {
+  partner3: {
     name: "Cardano Indonesia",
     logoUrl: "public/cardanoid.png",
     websiteUrl: "https://t.me/CardanoIndonesiaOfficial",
   },
-  partner5: {
+  partner4: {
     name: "Cardano Developer Indonesia",
     logoUrl: "public/cardanodev.jpg",
     websiteUrl: "https://t.me/CardanoDevID",
