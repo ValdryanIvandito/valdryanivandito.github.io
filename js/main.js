@@ -13,25 +13,48 @@
 // Add/edit/remove projects here - each project will automatically generate a card
 const portfolioData = {
   project1: {
+    title: "NFC Attendance System",
+    description:
+      "An enterprise-level NFC-based attendance system integrating Electron desktop applications with a React and Node.js web platform. Designed for real-time attendance tracking and direct hardware communication.",
+    videoId: "AFDV0ptgiMs",
+    youtubeUrl: "https://youtu.be/AFDV0ptgiMs",
+    documentationUrl:
+      "https://github.com/ValdryanIvandito/nfc-attendance-system",
+    technologies: [
+      { name: "Electron.js", color: "primary" },
+      { name: "React.js", color: "primary" },
+      { name: "TailwindCSS", color: "primary" },
+      { name: "Shadcn", color: "primary" },
+      { name: "Node.js", color: "primary" },
+      { name: "Express.js", color: "primary" },
+      { name: "PrismaORM", color: "primary" },
+      { name: "PostgreSQL", color: "primary" },
+      { name: "MIFARE Classic", color: "primary" },
+      { name: "ACR122U", color: "primary" },
+    ],
+  },
+
+  project2: {
     title: "Photo Studio Booking and Management System",
     description:
-      "Booking System for Photo Studio with payment gateway and admin dashboard.",
+      "A web-based booking and management system for photo studios featuring online reservations, secure payment gateway integration, and an administrative dashboard for business operations.",
     videoId: "TXnIQRIDI98",
     youtubeUrl: "https://youtu.be/TXnIQRIDI98",
     documentationUrl:
       "https://drive.google.com/file/d/1mnuKzhMEY6VvDFmJlVdzwHtOIA9NCBDT/view?usp=sharing",
     technologies: [
-      { name: "Next.js", color: "primary" },
-      { name: "TailwindCSS", color: "primary" },
-      { name: "Prisma", color: "primary" },
-      { name: "PostgreSQL", color: "primary" },
-      { name: "Midtrans", color: "primary" },
+      { name: "Next.js", color: "secondary" },
+      { name: "TailwindCSS", color: "secondary" },
+      { name: "PrismaORM", color: "secondary" },
+      { name: "PostgreSQL", color: "secondary" },
+      { name: "Midtrans", color: "secondary" },
     ],
   },
-  project2: {
+
+  project3: {
     title: "Photobooth User Interface and Payment System",
     description:
-      "Photobooth (Desktop Application) for user interface and payment system.",
+      "A desktop-based photobooth application focused on user interaction and automated payment processing to deliver a smooth and efficient customer experience.",
     videoId: "Hk-sUS1H9Jw",
     youtubeUrl: "https://youtu.be/Hk-sUS1H9Jw",
     documentationUrl:
@@ -44,10 +67,11 @@ const portfolioData = {
       { name: "Xendit", color: "accent" },
     ],
   },
-  project3: {
+
+  project4: {
     title: "Shoe Laundry Management System",
     description:
-      "Managing shoe laundry business with order management and tracking progress.",
+      "A business management platform for shoe laundry services enabling order tracking, workflow monitoring, and operational process management.",
     videoId: "uD5TgmOTBP4",
     youtubeUrl: "https://youtu.be/uD5TgmOTBP4",
     documentationUrl:
@@ -55,14 +79,15 @@ const portfolioData = {
     technologies: [
       { name: "Next.js", color: "green-500" },
       { name: "TailwindCSS", color: "green-500" },
-      { name: "Prisma", color: "green-500" },
+      { name: "PrismaORM", color: "green-500" },
       { name: "PostgreSQL", color: "green-500" },
     ],
   },
-  project4: {
+
+  project5: {
     title: "Open Heaven Foundation Website",
     description:
-      "Open Heaven Foundation responsive website with i18Next for multilingual support.",
+      "A responsive multilingual foundation website built with modern frontend technologies and internationalization support to enhance accessibility and user experience.",
     videoId: "UshzC-slIVs",
     youtubeUrl: "https://youtu.be/UshzC-slIVs",
     documentationUrl:
@@ -256,14 +281,14 @@ function generatePortfolioCards() {
           tech.color === "primary"
             ? "primary"
             : tech.color === "accent"
-            ? "accent"
-            : tech.color === "green-500"
-            ? "green-400"
-            : "purple-400"
+              ? "accent"
+              : tech.color === "green-500"
+                ? "green-400"
+                : "purple-400"
         } px-3 py-1 rounded-full text-sm">
           ${tech.name}
         </span>
-      `
+      `,
       )
       .join("");
 
@@ -577,7 +602,12 @@ function generateFooterSocialLinks() {
  * Cycles through different role titles with typing effect
  */
 function initTypingAnimation() {
-  const texts = ["Fullstack Developer", "Cardano Blockchain Educator"];
+  const texts = [
+    "Fullstack Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Blockchain Enthusiast",
+  ];
   let textIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
