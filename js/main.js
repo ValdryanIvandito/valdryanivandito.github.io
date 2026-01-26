@@ -15,7 +15,7 @@ const portfolioData = {
   project1: {
     title: "NFC Attendance System",
     description:
-      "NFC-based attendance system integrating Electron desktop applications with a React and Node.js. Designed for real-time attendance tracking and direct hardware communication.",
+      "NFC-based attendance system desktop application built with Electron.js, React.js, and Node.js, utilizing MIFARE Classic cards and ACR122U reader for affordable solution for attendance system.",
     videoId: "AFDV0ptgiMs",
     youtubeUrl: "https://youtu.be/AFDV0ptgiMs",
     documentationUrl:
@@ -29,6 +29,7 @@ const portfolioData = {
       { name: "Express.js", color: "primary" },
       { name: "PrismaORM", color: "primary" },
       { name: "PostgreSQL", color: "primary" },
+      { name: "Docker", color: "primary" },
       { name: "MIFARE Classic", color: "primary" },
       { name: "ACR122U", color: "primary" },
     ],
