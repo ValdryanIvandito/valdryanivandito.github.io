@@ -31,7 +31,6 @@ const portfolioData = {
       { name: "PostgreSQL", color: "primary" },
       { name: "Docker", color: "primary" },
       { name: "MIFARE Classic", color: "primary" },
-      { name: "ACR122U", color: "primary" },
     ],
   },
 
